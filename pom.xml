@@ -14,14 +14,16 @@
         <path.chrome>drivers\chromedriver.exe</path.chrome>
         <path.firefox>drivers\geckodriver.exe</path.firefox>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <selenide.version>4.5.1</selenide.version>
         <java.version>1.8</java.version>
-        <allure.version>1.4.16</allure.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <selenide.version>4.5.1</selenide.version>
         <aspectj.version>1.8.10</aspectj.version>
         <cucumber.version>1.2.5</cucumber.version>
-        <junit.version>4.12</junit.version>
+        <allure.version>1.4.16</allure.version>
+        <allure-cucumber.version>1.6.3</allure-cucumber.version>
+        <allure-maven.version>2.8</allure-maven.version>
+        <slf4j.version>1.7.21</slf4j.version>
     </properties>
 
     <profiles>
@@ -63,7 +65,7 @@
         <dependency>
             <groupId>ru.yandex.qatools.allure</groupId>
             <artifactId>allure-cucumber-jvm-adaptor</artifactId>
-            <version>1.6.3</version>
+            <version>${allure-cucumber.version}</version>
         </dependency>
         <dependency>
             <groupId>com.codeborne</groupId>
@@ -73,7 +75,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.21</version>
+            <version>${slf4j.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -113,7 +115,7 @@
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
-                <version>2.8</version>
+                <version>${allure-maven.version}</version>
             </plugin>
         </plugins>
     </reporting>
